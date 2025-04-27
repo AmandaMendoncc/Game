@@ -11,10 +11,17 @@
     <h1>DEV GAMER</h1>
     <p>Você é do tipo dev que gosta de resolver tudo com eficiência ou curte mais a liberdade criativa? Responda às perguntas e descubra se você é mais Python, C++, JavaScript ou outra linguagem. Vamos descobrir seu perfil de programador!</p>
     <button onclick="startQuiz()">Começar</button>
+    <button onclick="mostrarPersonagens()">Ver Todos os Personagens</button>
   </div>
 
   <div class="container hidden" id="quiz-screen"></div>
   <div class="container hidden" id="result-screen"></div>
+    <div class="container hidden" id="characters-screen">
+     <h2>Todos os Personagens</h2>
+     <div id="character-list" class="character-grid"></div>
+     <button onclick="voltarInicio()">Voltar</button>
+  </div>
+
 
   <script src="script.js"></script>
 </body>

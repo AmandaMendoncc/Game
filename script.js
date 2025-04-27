@@ -183,3 +183,25 @@ class Personagem {
     document.getElementById("start-screen").classList.remove("hidden");
   }
   
+  function mostrarPersonagens() {
+    document.getElementById("start-screen").classList.add("hidden");
+    document.getElementById("characters-screen").classList.remove("hidden");
+  
+    const container = document.getElementById("character-list");
+    container.innerHTML = '';
+  
+    Object.values(personagens).forEach(p => {
+      const personagemDiv = document.createElement("div");
+      personagemDiv.innerHTML = `
+        <img src="${p.imagem}" alt="${p.nome}" />
+        <div>${p.nome}</div>
+      `;
+      container.appendChild(personagemDiv);
+    });
+  }
+  
+  function voltarInicio() {
+    document.getElementById("characters-screen").classList.add("hidden");
+    document.getElementById("start-screen").classList.remove("hidden");
+  }
+  

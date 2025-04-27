@@ -68,6 +68,7 @@ button {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background 0.3s, transform 0.2s;
   margin: 0 auto;
+  margin-top: 1rem;
   display: block;
 }
 
@@ -101,4 +102,47 @@ h2 {
 
 p {
   font-size: 1.1rem;
+}
+
+/* Grade de personagens */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Card de personagem */
+.character-grid div {
+  background-color: #2A3A5F;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-grid div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.character-grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  background-color: #1f2a3a;
+  padding: 0.5rem;
+}
+
+.character-grid div div {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: auto;
 }
